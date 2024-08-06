@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Newsletter Subscription</title>
+  <script type="text/javascript">
+    function subscribeNewsletter() {
+      // Alert the user about the newsletter subscription
+      alert("Welcome to our website! We offer a weekly newsletter.");
+
+      // Ask if the user wants to subscribe
+      var subscribe = confirm("Would you like to subscribe to our newsletter?");
+
+      // If the user clicks "OK", subscribe is true
+      if (subscribe) {
+        // Ask for the user's email address
+        var email = prompt("Please enter your email address for the subscription:", "");
+
+        // If the user provided an email, show a thank you message
+        if (email) {
+          alert("Thanks! You will receive a confirmation email at "+ email + ".");
+        } else {
+          // The user clicked "Cancel" or entered an empty email address
+          alert("You did not provide an email address. No subscription has been made.");
+        }
+      } else {
+        // The user clicked "Cancel" on the confirm dialog
+        alert("No problem, you can always subscribe later if you change your mind.");
+      }
+    }
+  </script>
+</head>
+<body onload="subscribeNewsletter()">
+  <h1>Welcome to our Website!</h1>
+</body>
+</html>
