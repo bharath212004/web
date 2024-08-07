@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arithmetic Operations</title>
+  <script type="text/javascript">
+  function performOperations() {
+    var num1 = parseFloat(document.getElementById("number1").value);
+    var num2 = parseFloat(document.getElementById("number2").value);
+
+    // Error handling for invalid input
+    if (isNaN(num1) || isNaN(num2)) {
+      alert("Please enter valid numbers.");
+      return;
+    }
+
+    // Error handling for division by zero
+    if (num2 === 0) {
+      alert("Division by zero is not allowed.");
+      return;
+    }
+
+    document.getElementById("addition").textContent = "Addition: " + (num1 + num2);
+    document.getElementById("subtraction").textContent = "Subtraction: " + (num1 - num2);
+    document.getElementById("multiplication").textContent = "Multiplication: " + (num1 * num2);
+    document.getElementById("division").textContent = "Division: " + (num1 / num2);
+  }
+  </script>
+</head>
+<body>
+  <h1>Arithmetic Operations</h1>
+  <form>
+    Number 1:<input type="number" id="number1"><br><br>
+    Number 2:<input type="number" id="number2"><br><br>
+    <input type="button" value="Calculate" onclick="performOperations()">
+  </form>
+  <p id="addition"></p>
+  <p id="subtraction"></p>
+  <p id="multiplication"></p>
+  <p id="division"></p>
+</body>
+</html>
